@@ -1,4 +1,5 @@
 package org.example;
+
 import java.util.ArrayList;
 
 public class Usuario {
@@ -6,18 +7,21 @@ public class Usuario {
     private String apellido;
     private String telefono;
     private String email;
+    private String nombreUsuario;
+    private String contraseña;
     private ArrayList<Libro> librosPorDevolver;
 
-    // constructor
-    public Usuario(String nombre, String apellido, String telefono, String email) {
+    public Usuario(String nombre, String apellido, String telefono, String email, String nombreUsuario, String contraseña) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
         this.email = email;
+        this.nombreUsuario = nombreUsuario;
+        this.contraseña = contraseña;
         this.librosPorDevolver = new ArrayList<>();
     }
 
-    // getters y setters
+    // Getters y setters
 
     public String getNombre() {
         return nombre;
@@ -51,11 +55,27 @@ public class Usuario {
         this.email = email;
     }
 
-    public ArrayList<Libro> getLibros_por_devolver() {
-        return librosPorDevolver;
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public ArrayList<Libro> getLibrosPorDevolver() {
         return librosPorDevolver;
+    }
+
+    public void setLibrosPorDevolver(ArrayList<Libro> librosPorDevolver) {
+        this.librosPorDevolver = librosPorDevolver;
     }
 }
